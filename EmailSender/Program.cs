@@ -1,33 +1,37 @@
 ﻿using System;
-using System.Net.Mail;
 using System.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using log4net;
+using System.IO;
+using System.Reflection;
+using System.Text;
 
 namespace EmailSender
 {
     class Program
     {
+        public static IConfiguration Configuration { get; set; }
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(Program));
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            SmtpClient client = new SmtpClient();
-            client.Host = "mail.visionet.co.id";
-            client.Port = 25;
-            client.UseDefaultCredentials = false;
-            client.Credentials = new System.Net.NetworkCredential("noreply", "n0reply!99");
+            //initialize logging
+            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            log4net.Config.XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
 
-            MailMessage mailMessage = new MailMessage();
-            mailMessage.From = new MailAddress("noreply@visionet.co.id");
-            mailMessage.To.Add("wahyu.dzulhikam@visionet.co.id");
-            mailMessage.Body = "Test Body Email";
-            mailMessage.Subject = "Test Subject Email";
-            mailMessage.IsBodyHtml = true;
-            //client.Send(mailMessage);
+            Console.WriteLine("Hello World!");            
+            log.Info("Email Sent");
+
+            EmailHelper mail = new EmailHelper();
+            mail.sendMail("Email Subject","Email Body");
+            
+            log.Info("Email Sent");
             Console.WriteLine("Email Sent!");
 
             try 
             { 
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "10.10.115.23,1433\\dotEXTERNALDB"; 
+                builder.DataSource = "10.10.115.23,1433\\EXTERNALDB"; 
                 builder.UserID = "admin";            
                 builder.Password = "Password1!";     
                 builder.InitialCatalog = "WorkflowConfiguration";

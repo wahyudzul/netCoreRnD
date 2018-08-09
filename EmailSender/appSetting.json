@@ -1,0 +1,15 @@
+{
+    "smtp" : {
+        "smtpHost" : "mail.visionet.co.id",
+        "smtpPort" : 25,
+        "smtpUserName" : "noreply",
+        "smtpPassword" : "n0reply!99",
+        "emailAddress" : "noreply@visionet.co.id"   
+    },
+    "dbConnection" : {
+        "dbServer" : "10.10.115.23,1433\\EXTERNALDB",
+        "dbUserName" : "admin",
+        "dbPassword" : "Password1!",
+        "dbName" : "WorkflowConfiguration"     
+    }
+}
