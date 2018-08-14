@@ -1,3 +1,64 @@
 2018-08-09 11:30:17,633 [1] INFO EmailSender.Program - Email Sent
 2018-08-09 11:39:43,034 [1] INFO EmailSender.Program - Email Sent
 2018-08-09 11:39:47,530 [1] INFO EmailSender.Program - Email Sent
+2018-08-14 10:35:26,386 [1] INFO EmailSender.Program - Email Sent
+2018-08-14 10:37:12,585 [1] INFO EmailSender.Program - Email Sent
+2018-08-14 10:37:22,305 [1] ERROR EmailSender.Program - Error query to database : System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure ''.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EmailSender.Program.Main(String[] args) in /Users/wahyudzul/Projects/RnD/EmailSender/Program.cs:line 80
+ClientConnectionId:ab426698-6807-432a-9ec4-61d7b7836402
+Error Number:2812,State:62,Class:16
+2018-08-14 10:38:06,285 [1] INFO EmailSender.Program - Email Sent
+2018-08-14 10:38:12,773 [1] ERROR EmailSender.Program - Error query to database : System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'SPU_MIS_GetManagerByPositionLevel'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EmailSender.Program.Main(String[] args) in /Users/wahyudzul/Projects/RnD/EmailSender/Program.cs:line 80
+ClientConnectionId:b6cdebd6-377a-4f88-8dac-07142d888f0f
+Error Number:2812,State:62,Class:16
+2018-08-14 10:39:41,696 [1] INFO EmailSender.Program - Email Sent
+2018-08-14 11:05:15,803 [1] INFO EmailSender.Program - Email Sent
+2018-08-14 11:07:50,789 [1] INFO EmailSender.Program - Email Sent
+2018-08-14 11:15:38,098 [1] INFO EmailSender.Program - Email Sent
+2018-08-14 11:18:21,077 [1] INFO EmailSender.Program - Email Sent
+2018-08-14 11:18:24,674 [1] ERROR EmailSender.Program - Error query to database : System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'select Email from VU_EmployeeMAC where LoginName = @LoginName '.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EmailSender.userHelper.getManager(String userName, Int32 positionLevel) in /Users/wahyudzul/Projects/RnD/EmailSender/userHelper.cs:line 54
+ClientConnectionId:65911457-81e2-4ced-b232-b7e6ab529b7b
+Error Number:2812,State:62,Class:16
+2018-08-14 11:18:24,716 [1] ERROR EmailSender.Program - Error query to database : System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'select Email from VU_EmployeeMAC where LoginName = @LoginName '.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EmailSender.userHelper.getManager(String userName, Int32 positionLevel) in /Users/wahyudzul/Projects/RnD/EmailSender/userHelper.cs:line 54
+ClientConnectionId:65911457-81e2-4ced-b232-b7e6ab529b7b
+Error Number:2812,State:62,Class:16
+2018-08-14 11:18:54,731 [1] INFO EmailSender.Program - Email Sent
