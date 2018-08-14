@@ -56,7 +56,7 @@ namespace EmailSender
                 }
             }
 
-            Console.Write("Masukkan username : ")
+            Console.Write("Masukkan username : ");
             String username = Console.ReadLine();
             
             Person deptHead = userHelper.getManager(username,50);
